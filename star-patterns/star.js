@@ -63,3 +63,36 @@
 // 	}
 // 	process.stdout.write("\n");
 // }
+
+// pattern 7 - pyramid
+
+//
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+
+// 3 loops --> 2 loops for spaces , 1 loop fpr star
+// let n = 5;
+// for (let i = 0; i < n; i++) {
+// 	// for space
+
+// 	for (let j = 0; j < n - i + 1; j++) {
+// 		process.stdout.write(" ");
+// 	}
+
+// 	// for star
+
+// 	for (let k = 0; k < 2 * i + 1; k++) {
+// 		process.stdout.write("*");
+// 	}
+
+// 	// for space
+
+// 	for (let j = 0; j < n - i + 1; j++) {
+// 		process.stdout.write(" ");
+// 	}
+
+// 	process.stdout.write("\n");
+// }
