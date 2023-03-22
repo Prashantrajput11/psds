@@ -29,8 +29,37 @@
 // pattern 4
 // let rows = 5;
 // for (let i = 1; i <= rows; i++) {
-// 	for (let j = 1; j <= i; j++) { // prints row number i.e i
+// 	for (let j = 1; j <= i; j++) {
+// 		// prints row number i.e i
 // 		process.stdout.write(i.toString());
+// 	}
+// 	process.stdout.write("\n");
+// }
+
+//patter 5
+
+// let rows = 5;
+
+// for (let i = rows; i >= 1; i--) {
+// 	for (let j = 1; j <= i; j++) {
+// 		// prints row number i.e i
+// 		process.stdout.write("*");
+// 	}
+// 	process.stdout.write("\n");
+// }
+
+//pattern 6
+// 12345
+// 1234
+// 123
+// 12
+// 1
+// let rows = 5;
+
+// for (let i = rows; i >= 1; i--) {
+// 	for (let j = 1; j <= i; j++) {
+// 		// prints row number i.e i
+// 		process.stdout.write(j.toString());
 // 	}
 // 	process.stdout.write("\n");
 // }
