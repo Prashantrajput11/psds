@@ -117,3 +117,27 @@ for(let i = 1 ; i<= 5 ; i++){
   }
   process.stdout.write("\n");
 }
+
+
+// pattern 13
+
+for(let i = 1 ; i<= 5 ; i++){
+ 
+   
+     let char = "A"
+  
+  for(let j = 1 ;j <= i ; j++){
+    
+   
+    process.stdout.write(char);
+   let  currentCharCode  = char.charCodeAt(0) + 1
+   let nextCharCode = String.fromCharCode(currentCharCode);
+   char = nextCharCode
+    
+   
+   
+   
+     
+  }
+  process.stdout.write("\n");
+}
