@@ -96,3 +96,24 @@
 
 // 	process.stdout.write("\n");
 // }
+
+
+
+
+
+
+//Pattern 11
+
+for(let i = 1 ; i<= 5 ; i++){
+   let start = i % 2 !== 0 ? 1 : 0 
+    
+    
+  
+  for(let j = 1 ;j <= i ; j++){
+    
+   
+    process.stdout.write(start.toString());
+    start = 1- start // to aleter the start value from 0-1 and vice versa
+  }
+  process.stdout.write("\n");
+}

@@ -17,15 +17,15 @@ const calculateDiscount = (product, discountPercentage) => {
 	return product.price - discount;
 };
 const applyDiscount = (products, productId, discountPercentage) => {
-	return products.reduce((acc, curr) => {
-		curr.id === productId
-			? acc.push({
-					...curr,
-					price: calculateDiscount(curr, discountPercentage),
-			  })
-			: acc.push(curr);
-		return acc;
-	}, []);
+	return products.reduce(
+		(acc, curr) => [
+			...acc,
+			curr.id === productId
+				? { ...curr, price: calculateDiscount(curr, discountPercentage) }
+				: curr,
+		],
+		[]
+	);
 };
 
 console.log(applyDiscount(products, 3, 5));
@@ -61,7 +61,7 @@ const updateBookRating = (books, bookId, newRating) => {
 	});
 };
 
-console.log(updateBookRating(books, 3, 4.6));
+// console.log(updateBookRating(books, 3, 4.6));
 
 ////////////////////////////////////////////////////////////////////
 // Given an array of products and a product ID,
@@ -135,4 +135,4 @@ const updateUserInfo = (users, userId, updateProperty, updateValue) => {
 	});
 };
 
-console.log(updateUserInfo(users, 1, "email", "prashant1@gmail.com"));
+// console.log(updateUserInfo(users, 1, "email", "prashant1@gmail.com"));
