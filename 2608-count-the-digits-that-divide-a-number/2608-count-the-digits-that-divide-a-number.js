@@ -2,17 +2,15 @@
  * @param {number} num
  * @return {number}
  */
-var countDigits = function(num) {
-	let tempNum = num;
+var countDigits = function(N) {
 	let count = 0;
-
-	while (tempNum !== 0) {
-		let digit = tempNum % 10;
-		if (num % digit === 0) {
-			count++;
+	let temp = N;
+	while (N > 0) {
+		let digit = N % 10;
+		if (temp % digit === 0) {
+			count = count + 1;
 		}
-		tempNum = Math.floor(tempNum / 10);
+		N = Math.floor(N / 10);
 	}
-
 	return count;
 };
