@@ -32,3 +32,15 @@ function NToOne(n) {
 	NToOne(n - 1);
 }
 NToOne(10);
+
+function getProduct() {
+	// base case
+	if (arr.length <= 0) {
+		return 1;
+	}
+	let smallProblem = mul(arr.splice(0, arr.length - 1));
+
+	let bigProblem = arr[arr.length - 1] * smallProblem;
+
+	return bigProblem;
+}

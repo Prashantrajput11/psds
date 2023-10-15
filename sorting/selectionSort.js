@@ -9,14 +9,16 @@ function sortArray(arr) {
 			}
 		}
 
-		if (minIndex !== i) {
-			const temp = arr[i];
-			arr[i] = arr[minIndex]; // shift the element to the first pos
-			arr[minIndex] = temp;
-		}
+		swapData(arr, i, minIndex);
 	}
 
 	return arr;
 }
 
 console.log(sortArray([1, 3, 2, 6, 4, 5]));
+
+function swapData(arr, indexOne, indexTwo) {
+	const temp = arr[indexOne];
+	arr[indexOne] = arr[indexTwo];
+	arr[indexTwo] = temp;
+}
